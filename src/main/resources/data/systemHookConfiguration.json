@@ -1,0 +1,31 @@
+{
+	"systemhooks": {
+		"amqp": [
+			{
+				"bulkSize": 10,
+				"enable": true,
+				"password": "optimal",
+				"predicate": "spel:(contentStreams != null && contentStreams.size() > 0 && contentStreams[0]['range'] != null && contentStreams[0]['range'].length() > 0) ? true : false",
+				"queue": "lc.textextraction",
+				"type": "object.insert.document",
+				"url": "10.10.7.82:30672",
+				"user": "rodger"
+			}
+		],
+		"webhooks": [
+			{
+				"enable": true,
+				"predicate": "spel:true",
+				"type": "user.info",
+				"url": "http://organization/api/userinfo/${tenant}/${userId}"
+			},
+			{
+				"enable": true,
+				"predicate": "spel:contentStreams!=null",
+				"type": "dms.request.import.storage.before",
+				"url": "http://127.0.0.1:9999/api/insert/document",
+				"useDiscovery": false
+			}
+		]
+	}
+}

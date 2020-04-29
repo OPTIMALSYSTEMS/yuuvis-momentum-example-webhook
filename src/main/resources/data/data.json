@@ -1,0 +1,29 @@
+{
+	"objects": [{
+		"properties": {
+			"system:objectTypeId": {
+				"value": "object"
+			},
+			"label": {
+				"value": "Label"
+			},
+			"subentitaet": {
+				"value": "Sub"
+			},
+			"idn": {
+				"value": "6754"
+			},
+			"titel": {
+				"value": "Titel"
+			},
+			"medientyp": {
+				"value": "Cool filename"
+			}
+
+		},
+		"contentStreams": [{
+			"cid": "cid_63apple",
+			"fileName" : "tränenüberströmt geißler 日本語.pdf"
+		}]
+	}]
+}
